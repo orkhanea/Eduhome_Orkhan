@@ -1,0 +1,123 @@
+﻿@model Teacher
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+
+
+    <form class="my-5" asp-area="Admin" asp-controller="Teacher" asp-action="Create" method="post" enctype="multipart/form-data">
+
+        <div class="row mt-3">
+
+            <div class="mb-3 col-lg-6">
+                <label asp-for="@Model.Name" class="form-label" style="font-weight: bold; font-size: 20px; color: #223e9c;">Name</label>
+                <input class="form-control" asp-for="@Model.Name"></input>
+                <span class="text-danger" asp-validation-for="@Model.Name"></span>
+            </div>
+            <div class="mb-3 col-lg-6">
+                <label asp-for="@Model.Surname" class="form-label" style="font-weight: bold; font-size: 20px; color: #223e9c;">Surname</label>
+                <input class="form-control" asp-for="@Model.Surname"></input>
+                <span class="text-danger" asp-validation-for="@Model.Surname"></span>
+            </div>
+            <div class="mb-3 col-lg-4">
+                <label asp-for="@Model.Degree" class="form-label" style="font-weight: bold; font-size: 20px; color: #223e9c;">Degree</label>
+                <input class="form-control" asp-for="@Model.Degree"></input>
+                <span class="text-danger" asp-validation-for="@Model.Degree"></span>
+            </div>
+            <div class="mb-3 col-lg-4">
+                <label asp-for="@Model.Faculity" class="form-label" style="font-weight: bold; font-size: 20px; color: #223e9c;">Faculity</label>
+                <input class="form-control" asp-for="@Model.Faculity"></input>
+                <span class="text-danger" asp-validation-for="@Model.Faculity"></span>
+            </div>
+            <div class="mb-3 col-lg-4">
+                <label asp-for="@Model.Experience" class="form-label" style="font-weight: bold; font-size: 20px; color: #223e9c;">Experience</label>
+                <input class="form-control" asp-for="@Model.Experience"></input>
+                <span class="text-danger" asp-validation-for="@Model.Experience"></span>
+            </div>
+            <div class="mb-3 col-lg-4">
+                <label asp-for="@Model.Position" class="form-label" style="font-weight: bold; font-size: 20px; color: #223e9c;">Position</label>
+                <input class="form-control" asp-for="@Model.Position"></input>
+                <span class="text-danger" asp-validation-for="@Model.Position"></span>
+            </div>
+
+            <div class="mb-3 col-lg-4">
+                <label asp-for="@Model.Email" class="form-label" style="font-weight: bold; font-size: 20px; color: #223e9c;">Email</label>
+                <input class="form-control" asp-for="@Model.Email"></input>
+                <span class="text-danger" asp-validation-for="@Model.Email"></span>
+            </div>
+            <div class="mb-3 col-lg-4">
+                <label asp-for="@Model.Phone" class="form-label" style="font-weight: bold; font-size: 20px; color: #223e9c;">Phone</label>
+                <input class="form-control" asp-for="@Model.Phone"></input>
+                <span class="text-danger" asp-validation-for="@Model.Phone"></span>
+            </div>
+        </div>
+        <hr>
+        <div class="row justify-content-around">
+
+            <div class="mb-3 col-lg-4">
+                <label asp-for="@Model.Skype" class="form-label" style="font-weight: bold; font-size: 20px; color: #223e9c;">Skype</label>
+                <input class="form-control" asp-for="@Model.Skype"></input>
+                <span class="text-danger" asp-validation-for="@Model.Skype"></span>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="mb-3 col-lg-4">
+                <label asp-for="@Model.Teacherskills.Language" class="form-label" style="font-weight: bold; font-size: 20px; color: #223e9c;">Language</label>
+                <input class="form-control" asp-for="@Model.Teacherskills.Language">
+                <span class="text-danger" asp-validation-for="@Model.Teacherskills.Language"></span>
+            </div>
+            <div class="mb-3 col-lg-4">
+                <label asp-for="@Model.Teacherskills.Communication" class="form-label" style="font-weight: bold; font-size: 20px; color: #223e9c;">Communication</label>
+                <input class="form-control" asp-for="@Model.Teacherskills.Communication">
+                <span class="text-danger" asp-validation-for="@Model.Teacherskills.Language"></span>
+            </div>
+            <div class="mb-3 col-lg-4">
+                <label asp-for="@Model.Teacherskills.Design" class="form-label" style="font-weight: bold; font-size: 20px; color: #223e9c;">Design</label>
+                <input class="form-control" asp-for="@Model.Teacherskills.Design">
+                <span class="text-danger" asp-validation-for="@Model.Teacherskills.Design"></span>
+            </div>
+            <div class="mb-3 col-lg-4">
+                <label asp-for="@Model.Teacherskills.Development" class="form-label" style="font-weight: bold; font-size: 20px; color: #223e9c;">Development</label>
+                <input class="form-control" asp-for="@Model.Teacherskills.Development">
+                <span class="text-danger" asp-validation-for="@Model.Teacherskills.Development"></span>
+            </div>
+            <div class="mb-3 col-lg-4">
+                <label asp-for="@Model.Teacherskills.Inovation" class="form-label" style="font-weight: bold; font-size: 20px; color: #223e9c;">Inovation</label>
+                <input class="form-control" asp-for="@Model.Teacherskills.Inovation">
+                <span class="text-danger" asp-validation-for="@Model.Teacherskills.Inovation"></span>
+            </div>
+            <div class="mb-3 col-lg-4">
+                <label asp-for="@Model.Teacherskills.TeamLeader" class="form-label" style="font-weight: bold; font-size: 20px; color: #223e9c;">TeamLeader</label>
+                <input class="form-control" asp-for="@Model.Teacherskills.TeamLeader">
+                <span class="text-danger" asp-validation-for="@Model.Teacherskills.TeamLeader"></span>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row justify-content-around">
+
+            <div class="mb-3 col-lg-12">
+                <label asp-for="@Model.About" class="form-label" style="font-weight: bold; font-size: 20px; color: #223e9c;">About</label>
+                <textarea class="form-control" asp-for="@Model.About" rows="5"></textarea>
+                <span class="text-danger" asp-validation-for="@Model.About"></span>
+            </div>
+            <div class="mb-3 col-lg-12">
+                <label asp-for="@Model.ImageFile" class="form-label" style="font-weight: bold; font-size: 20px; color: #223e9c;">Image</label>
+                <input class="form-control" asp-for="@Model.ImageFile"></input>
+                <span class="text-danger" asp-validation-for="@Model.ImageFile"></span>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+
+
+</div>
+
+

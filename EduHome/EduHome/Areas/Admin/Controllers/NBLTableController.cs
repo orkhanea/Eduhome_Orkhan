@@ -9,17 +9,13 @@ using System.Threading.Tasks;
 namespace EduHome.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class TablesController : Controller
+    public class NBLTableController : Controller
     {
         private readonly AppDbContext _context;
 
-        public TablesController(AppDbContext context)
+        public NBLTableController(AppDbContext context)
         {
             _context = context;
-        }
-        public IActionResult SettingTable()
-        {
-            return View();
         }
 
         public IActionResult NoticeBoardLeftTable()
@@ -54,9 +50,19 @@ namespace EduHome.Areas.Admin.Controllers
 
 
         [HttpGet]
-        public IActionResult Update(int Id)
+        public IActionResult Update(int? Id)
         {
-            
+            if (Id==null)
+            {
+                TempData["UpdateIdError"] = "Heyatdida her sey ola biler.";
+                return RedirectToAction("NoticeBoardLeftTable");
+            }
+            NoticeBoardLeft NLBUI = _context.NoticeBoardLefts.Find(Id);
+            if (NLBUI == null )
+            {
+                TempData["UpdateIdError2"] = "Heyatdida her sey ola biler 2.";
+                return RedirectToAction("NoticeBoardLeftTable");
+            }
             return View(_context.NoticeBoardLefts.Find(Id));
         }
 
@@ -89,7 +95,7 @@ namespace EduHome.Areas.Admin.Controllers
             NoticeBoardLeft NBL = _context.NoticeBoardLefts.Find(Id);
             if (NBL==null)
             {
-                TempData["NBL"] = "Sohbet Olub";
+                TempData["NBL"] = "Sohbet Olub 2";
                 return RedirectToAction("NoticeBoardLeftTable");
             }
             _context.NoticeBoardLefts.Remove(NBL);

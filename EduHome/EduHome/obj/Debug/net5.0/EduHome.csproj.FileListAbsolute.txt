@@ -149,9 +149,10 @@ C:\Users\ASUS\Desktop\Tasks\EduHome_Orkhan\EduHome\EduHome\obj\Debug\net5.0\Razo
 C:\Users\ASUS\Desktop\Tasks\EduHome_Orkhan\EduHome\EduHome\obj\Debug\net5.0\Razor\Views\Teacher\Teacher.cshtml.g.cs
 C:\Users\ASUS\Desktop\Tasks\EduHome_Orkhan\EduHome\EduHome\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\ASUS\Desktop\Tasks\EduHome_Orkhan\EduHome\EduHome\obj\Debug\net5.0\Razor\Areas\Admin\Views\Home\AdminHome.cshtml.g.cs
-C:\Users\ASUS\Desktop\Tasks\EduHome_Orkhan\EduHome\EduHome\obj\Debug\net5.0\Razor\Areas\Admin\Views\Tables\SettingTable.cshtml.g.cs
 C:\Users\ASUS\Desktop\Tasks\EduHome_Orkhan\EduHome\EduHome\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 C:\Users\ASUS\Desktop\Tasks\EduHome_Orkhan\EduHome\EduHome\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
-C:\Users\ASUS\Desktop\Tasks\EduHome_Orkhan\EduHome\EduHome\obj\Debug\net5.0\Razor\Areas\Admin\Views\Tables\NoticeBoardLeftTable.cshtml.g.cs
-C:\Users\ASUS\Desktop\Tasks\EduHome_Orkhan\EduHome\EduHome\obj\Debug\net5.0\Razor\Areas\Admin\Views\Tables\Create.cshtml.g.cs
-C:\Users\ASUS\Desktop\Tasks\EduHome_Orkhan\EduHome\EduHome\obj\Debug\net5.0\Razor\Areas\Admin\Views\Tables\Update.cshtml.g.cs
+C:\Users\ASUS\Desktop\Tasks\EduHome_Orkhan\EduHome\EduHome\obj\Debug\net5.0\Razor\Areas\Admin\Views\NBLTable\Create.cshtml.g.cs
+C:\Users\ASUS\Desktop\Tasks\EduHome_Orkhan\EduHome\EduHome\obj\Debug\net5.0\Razor\Areas\Admin\Views\NBLTable\NoticeBoardLeftTable.cshtml.g.cs
+C:\Users\ASUS\Desktop\Tasks\EduHome_Orkhan\EduHome\EduHome\obj\Debug\net5.0\Razor\Areas\Admin\Views\NBLTable\Update.cshtml.g.cs
+C:\Users\ASUS\Desktop\Tasks\EduHome_Orkhan\EduHome\EduHome\obj\Debug\net5.0\Razor\Areas\Admin\Views\Teacher\Index.cshtml.g.cs
+C:\Users\ASUS\Desktop\Tasks\EduHome_Orkhan\EduHome\EduHome\obj\Debug\net5.0\Razor\Areas\Admin\Views\Teacher\Create.cshtml.g.cs
