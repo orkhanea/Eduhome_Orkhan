@@ -26,15 +26,6 @@
                             <th style="color: midnightblue !important; font-weight: 600 !important; font-size: 20px !important;">
                                 Position
                             </th>
-                            @*<th>
-                                Degree
-                            </th>*@
-                            @*<th>
-                                Faculity
-                            </th>
-                            <th>
-                                Experience
-                            </th>*@
                             <th style="color: midnightblue !important; font-weight: 600 !important; font-size: 20px !important;">
                                 Email
                             </th>
@@ -44,15 +35,9 @@
                             <th style="color: midnightblue !important; font-weight: 600 !important; font-size: 20px !important;">
                                 Skype
                             </th>
-                            @*<th style="color: midnightblue !important; font-weight: 600 !important; font-size: 20px !important;">
-                                About
-                            </th>*@
                             <th style="color: midnightblue !important; font-weight: 600 !important; font-size: 20px !important;">
                                 Edit
                             </th>
-                            @*<th>
-                                Skills
-                            </th>*@
                         </tr>
                     </thead>
                     @{
@@ -74,15 +59,6 @@
                                     <td style="font-size: 18px !important;">
                                         @item.Position
                                     </td>
-                                    @*<td>
-                                        @item.Degree
-                                    </td>
-                                    <td>
-                                        @item.Faculity
-                                    </td>
-                                    <td>
-                                        @item.Experience
-                                    </td>*@
                                     <td style="font-size: 18px !important;">
                                         @item.Email
                                     </td>
@@ -92,21 +68,11 @@
                                     <td style="font-size: 18px !important;">
                                         @item.Skype
                                     </td>
-                                    @*<td style="font-size: 18px !important;">
-                                        @(item.About != null && item.About.Length > 50 ? item.About.Substring(0, 50)+"..." : item.About )
-                                    </td>*@
-                                    @*<td>
-                                        @item.Teacherskills.Communication
-                                        @item.Teacherskills.Design
-                                        @item.Teacherskills.Development
-                                        @item.Teacherskills.Inovation
-                                        @item.Teacherskills.Language
-                                        @item.Teacherskills.TeamLeader
-                                    </td>*@
+
                                     <td style="text-align: center;">
-                                            <a class="btn btn-success btn-sm" style="width: 100px;" asp-area="Admin" asp-controller="NBLTable" asp-action="Update" asp-route-id="@item.Id">Update</a>
-                                            <a class="btn btn-danger btn-sm my-2" style="width: 100px;" asp-area="Admin" asp-controller="NBLTable" asp-action="Delete" asp-route-id="@item.Id" onclick="return confirm('Are you sure you want to delete this data?')">Delete</a>
-                                            <a class="btn btn-info btn-sm" style="width: 100px;" asp-area="Admin" asp-controller="NBLTable" asp-action="Update" asp-route-id="@item.Id">Details</a>
+                                            <a class="btn btn-success btn-sm" style="width: 100px;" asp-area="Admin" asp-controller="Teacher" asp-action="Update" asp-route-id="@item.Id">Update</a>
+                                            <a class="btn btn-danger btn-sm my-2" style="width: 100px;" asp-area="Admin" asp-controller="Teacher" asp-action="Delete" asp-route-id="@item.Id" onclick="return confirm('Are you sure you want to delete this data?')">Delete</a>
+                                            <a class="btn btn-info btn-sm" style="width: 100px;" asp-area="Admin" asp-controller="Teacher" asp-action="Details" asp-route-id="@item.Id">Details</a>
                                         </td>
                                 </tr>
                             </tbody>

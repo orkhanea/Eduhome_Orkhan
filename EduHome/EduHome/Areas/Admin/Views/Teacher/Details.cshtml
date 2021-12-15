@@ -1,0 +1,159 @@
+﻿@model Teacher
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+
+
+
+
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-7 col-lg-4 mb-5 mb-lg-0 wow fadeIn">
+            <div class="card border-0 shadow">
+                <img src="~/img/teacher/@Model.Image" alt="...">
+                <div class="card-body p-1-9 p-xl-5">
+                    <div class="mb-4">
+                        <h3 class="h4 mb-0">@Model.Name @Model.Surname</h3>
+                        <span class="text-primary">CEO &amp; Founder</span>
+                    </div>
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-3"><a class="d-flex align-items-center text-decoration-none" style="font-weight: 600 !important; color: darkgreen !important;" href="#!"><i style="width: 25px !important; height: 25px !important;" class="far fa-envelope display-25 me-3 text-secondary mr-3 d-flex justify-content-center"></i> @Model.Email</a></li>
+                        <li class="mb-3"><a class="d-flex align-items-center text-decoration-none" style="font-weight: 600 !important; color: darkgreen !important;" href="#!"><i style="width: 25px !important; height: 25px !important;" class="fas fa-mobile-alt display-25 me-3 text-secondary mr-3 d-flex justify-content-center"></i> @Model.Phone</a></li>
+                        <li><a class="d-flex align-items-center text-decoration-none" style="font-weight: 600 !important; color: darkgreen !important;" href="#!"><i style="width: 25px !important; height: 25px !important;" class="fab fa-skype display-25 me-3 text-secondary mr-3 d-flex justify-content-center"></i> @Model.Skype</a></li>
+                    </ul>
+                    <ul class="social-icon-style2 ps-0">
+                        @{
+                            foreach (var s in Model.TeacherSocialToTeachers)
+                            {
+                                <li><a href="@s.TeacherSocial.Link" class="rounded-3"><i class="@s.TeacherSocial.Icon"></i></a></li>
+                            }
+                        }
+
+                       
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="ps-lg-1-6 ps-xl-5">
+                <div class="mb-5 wow fadeIn">
+                    <div class="text-start mb-1-6 wow fadeIn">
+                        <h2 class="h1 mb-0 text-primary">#About Me</h2>
+                    </div>
+                    <p>@Model.About</p>
+                    
+                </div>
+                <div class="mb-5 wow fadeIn">
+                    <div class="text-start mb-1-6 wow fadeIn">
+                        <h2 class="mb-0 text-primary">#Education</h2>
+                    </div>
+                    <div class="row mt-n4">
+                        <div class="col-sm-6 col-xl-6 mt-4">
+                            <div class="card text-center border-0 rounded-3">
+                                <div class="card-body">
+                                    <i class="ti-bookmark-alt icon-box medium rounded-3 mb-4"></i>
+                                    <h3 class="h5 mb-3">Faculity</h3>
+                                    <p class="mb-0">@Model.Faculity</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xl-6 mt-4">
+                            <div class="card text-center border-0 rounded-3">
+                                <div class="card-body">
+                                    <i class="ti-pencil-alt icon-box medium rounded-3 mb-4"></i>
+                                    <h3 class="h5 mb-3">Degree</h3>
+                                    <p class="mb-0">@Model.Degree</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xl-6 mt-4">
+                            <div class="card text-center border-0 rounded-3">
+                                <div class="card-body">
+                                    <i class="ti-medall-alt icon-box medium rounded-3 mb-4"></i>
+                                    <h3 class="h5 mb-3">Experience</h3>
+                                    <p class="mb-0">About @Model.Experience and professional in signage</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xl-6 mt-4">
+                            <div class="card text-center border-0 rounded-3">
+                                <div class="card-body">
+                                    <i class="ti-medall-alt icon-box medium rounded-3 mb-4"></i>
+                                    <h3 class="h5 mb-3">Position</h3>
+                                    <p class="mb-0">@Model.Position</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wow fadeIn">
+                    <div class="text-start mb-1-6 wow fadeIn">
+                        <h2 class="mb-0 text-primary">#Skills &amp; Experience</h2>
+                    </div>
+                    <div class="progress-style1">
+                        <div class="progress-text">
+                            <div class="row">
+                                <div class="col-6 fw-bold" style="font-weight: 700 !important; color: darkgreen !important;">Language</div>
+                                <div class="col-6 text-end" style="font-weight: 700 !important; color: darkgreen !important;">@Model.Teacherskills.Language%</div>
+                            </div>
+                        </div>
+                        <div class="custom-progress progress rounded-3 mb-4">
+                            <div class="animated custom-bar progress-bar slideInLeft" style="background-color: #007bff !important; width: @Model.Teacherskills.Language%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" role="progressbar"></div>
+                        </div>
+                        <div class="progress-text">
+                            <div class="row">
+                                <div class="col-6 fw-bold" style="font-weight: 700 !important; color: darkgreen !important;">Development</div>
+                                <div class="col-6 text-end" style="font-weight: 700 !important; color: darkgreen !important;">@Model.Teacherskills.Development%</div>
+                            </div>
+                        </div>
+                        <div class="custom-progress progress rounded-3 mb-4">
+                            <div class="animated custom-bar progress-bar bg-secondary slideInLeft" style=" background-color: #007bff !important; width: @Model.Teacherskills.Development%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="70" role="progressbar"></div>
+                        </div>
+                        <div class="progress-text">
+                            <div class="row">
+                                <div class="col-6 fw-bold" style="font-weight: 700 !important; color: darkgreen !important;">Design</div>
+                                <div class="col-6 text-end" style="font-weight: 700 !important; color: darkgreen !important;">@Model.Teacherskills.Design%</div>
+                            </div>
+                        </div>
+                        <div class="custom-progress progress rounded-3 mb-4">
+                            <div class="animated custom-bar progress-bar bg-dark slideInLeft" style=" background-color: #007bff !important; width: @Model.Teacherskills.Design%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="70" role="progressbar"></div>
+                        </div>
+                        <div class="progress-text">
+                            <div class="row">
+                                <div class="col-6 fw-bold" style="font-weight: 700 !important; color: darkgreen !important;">Communication</div>
+                                <div class="col-6 text-end" style="font-weight: 700 !important; color: darkgreen !important;">@Model.Teacherskills.Communication%</div>
+                            </div>
+                        </div>
+                        <div class="custom-progress progress rounded-3 mb-4">
+                            <div class="animated custom-bar progress-bar bg-dark slideInLeft" style=" background-color: #007bff !important; width: @Model.Teacherskills.Communication%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="70" role="progressbar"></div>
+                        </div>
+                        <div class="progress-text">
+                            <div class="row">
+                                <div class="col-6 fw-bold" style="font-weight: 700 !important; color: darkgreen !important;">Innovation</div>
+                                <div class="col-6 text-end" style="font-weight: 700 !important; color: darkgreen !important;">@Model.Teacherskills.Inovation%</div>
+                            </div>
+                        </div>
+                        <div class="custom-progress progress rounded-3 mb-4">
+                            <div class="animated custom-bar progress-bar bg-dark slideInLeft" style=" background-color: #007bff !important; width: @Model.Teacherskills.Inovation%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="70" role="progressbar"></div>
+                        </div>
+                        <div class="progress-text">
+                            <div class="row">
+                                <div class="col-6 fw-bold" style="font-weight: 700 !important; color: darkgreen !important;">Team Leader</div>
+                                <div class="col-6 text-end" style="font-weight: 700 !important; color: darkgreen !important;">@Model.Teacherskills.TeamLeader%</div>
+                            </div>
+                        </div>
+                        <div class="custom-progress progress rounded-3 mb-4">
+                            <div class="animated custom-bar progress-bar bg-dark slideInLeft" style=" background-color: #007bff !important; width: @Model.Teacherskills.TeamLeader%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="70" role="progressbar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -156,3 +156,5 @@ C:\Users\ASUS\Desktop\Tasks\EduHome_Orkhan\EduHome\EduHome\obj\Debug\net5.0\Razo
 C:\Users\ASUS\Desktop\Tasks\EduHome_Orkhan\EduHome\EduHome\obj\Debug\net5.0\Razor\Areas\Admin\Views\NBLTable\Update.cshtml.g.cs
 C:\Users\ASUS\Desktop\Tasks\EduHome_Orkhan\EduHome\EduHome\obj\Debug\net5.0\Razor\Areas\Admin\Views\Teacher\Index.cshtml.g.cs
 C:\Users\ASUS\Desktop\Tasks\EduHome_Orkhan\EduHome\EduHome\obj\Debug\net5.0\Razor\Areas\Admin\Views\Teacher\Create.cshtml.g.cs
+C:\Users\ASUS\Desktop\Tasks\EduHome_Orkhan\EduHome\EduHome\obj\Debug\net5.0\Razor\Areas\Admin\Views\Teacher\Details.cshtml.g.cs
+C:\Users\ASUS\Desktop\Tasks\EduHome_Orkhan\EduHome\EduHome\obj\Debug\net5.0\Razor\Areas\Admin\Views\Teacher\Update.cshtml.g.cs
