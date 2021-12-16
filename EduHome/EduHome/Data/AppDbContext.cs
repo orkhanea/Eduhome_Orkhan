@@ -1,4 +1,5 @@
 ﻿using EduHome.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EduHome.Data
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : IdentityDbContext
     {
         public AppDbContext(DbContextOptions option) :base(option)
         {
@@ -47,5 +48,6 @@ namespace EduHome.Data
         public DbSet<TeacherSocial> TeacherSocials { get; set; }
         public DbSet<TeacherSocialToTeacher> TeacherSocialToTeachers { get; set; }
         public DbSet<VideoTour> VideoTours { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }
